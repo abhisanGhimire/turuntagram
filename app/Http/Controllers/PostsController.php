@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
+use App\Post;
 
 class PostsController extends Controller {
     public function __construct() {
@@ -27,5 +28,9 @@ class PostsController extends Controller {
             'image'=> $imagePath,
         ] );
         return redirect( '/profile/'.auth()->user()->id );
+    }
+
+    public function show( Post $post ) {
+        return view( 'posts.show', compact( 'post' ) );
     }
 }
