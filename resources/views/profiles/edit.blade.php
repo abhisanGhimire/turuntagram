@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <form action="/profile/{{ $user->id }}" enctype="multipart/form-data" method="post">
+    <form action="{{url('/profile/'. $user->id)  }}" enctype="multipart/form-data" method="post">
         @csrf
         @method('PATCH')
         <div class="row">
@@ -42,10 +42,10 @@
 
 
                 <div class="d-flex pt-4">
-                    <label for="URL" class="col-md-4 col-form-label">URL</label>
-                    <input id="URL" type="text" class="form-control @error('URL') is-invalid @enderror" name="URL"
-                        value="{{ old('URL')??$user->profile->url ??''}}" autocomplete="URL" autofocus>
-                    @error('URL')
+                    <label for="url" class="col-md-4 col-form-label">URL</label>
+                    <input id="url" type="text" class="form-control @error('url') is-invalid @enderror" name="url"
+                        value="{{ old('url')??$user->profile->url ??''}}" autocomplete="url" autofocus>
+                    @error('url')
                     <span class="invalid-feedback pl-5" role="alert">
                         <strong>
                             {{ $message }}
