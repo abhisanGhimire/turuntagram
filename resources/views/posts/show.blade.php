@@ -20,7 +20,8 @@
                                     text-dark  pr-1">{{ $post->user->username }}
                                 </span>
                             </a>&#9679;
-                            <a href="#" class="pl-1">Follow</a>
+                            <follow-button user-id="{{ $user->id}}" follows=" {{ $follows }}">
+                            </follow-button>
                         </div>
                     </div>
                 </div>

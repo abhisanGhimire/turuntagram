@@ -1930,6 +1930,7 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.post("/follow/" + this.userId).then(function (response) {
         _this.status = !_this.status;
+        console.log(response.data);
       })["catch"](function (error) {
         if (errors.response.satus == 401) {
           window.location = "/login";
@@ -49932,8 +49933,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\laravel_projects\turuntagram\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\laravel_projects\turuntagram\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! c:\xampp\htdocs\laravel_projects\turuntagram\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! c:\xampp\htdocs\laravel_projects\turuntagram\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
